@@ -60,7 +60,7 @@ const AboutSection = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="py-24 md:py-32 bg-[#0a0a0a] relative overflow-visible"
+      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a] relative overflow-visible"
     >
       <div className="section-container">
         {/* Section Header */}
@@ -68,18 +68,18 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-12 sm:mb-16 md:mb-20 text-center"
         >
           <span className="section-label">
             About Me
           </span>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-4 text-white uppercase">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-3 sm:mt-4 text-white uppercase">
             The Storyteller
           </h2>
         </motion.div>
 
         {/* Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 items-start mb-20 md:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-start mb-20 sm:mb-24 md:mb-28">
           {/* Image Side */}
           <motion.div
             style={{ y: imageY }}
@@ -121,12 +121,12 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="order-1 lg:order-2"
           >
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display tracking-wider text-white mb-4 sm:mb-6 uppercase">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display tracking-wider text-white mb-5 sm:mb-6 md:mb-8 uppercase">
               Capturing Emotions,{' '}
               <span className="text-[#00e5c0]">Creating Connections</span>
             </h3>
             
-            <div className="space-y-4 sm:space-y-5 text-[#6b6b6b] leading-relaxed text-sm sm:text-base">
+            <div className="space-y-4 sm:space-y-5 md:space-y-6 text-[#6b6b6b] leading-relaxed text-sm sm:text-base">
               <p>
                 I'm a visual storyteller with a passion for capturing the raw, unfiltered moments 
                 that define our human experience. With my camera as my compass, I've traveled 
@@ -145,15 +145,15 @@ const AboutSection = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-6 sm:mt-8 pl-4 sm:pl-6 border-l-2 border-[#00e5c0]"
+              className="mt-8 sm:mt-10 pl-5 sm:pl-6 border-l-2 border-[#00e5c0]"
             >
-              <p className="text-base sm:text-lg text-white italic font-display tracking-wide">
+              <p className="text-base sm:text-lg md:text-xl text-white italic font-display tracking-wide">
                 "Every frame is a chance to make someone feel something they've never felt before."
               </p>
             </motion.blockquote>
 
             {/* Stats Row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-[#1f1f1f]">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mt-10 sm:mt-12 pt-10 sm:pt-12 border-t border-[#1f1f1f]">
               {stats.map((stat, index) => (
                 <motion.div 
                   key={stat.label}
@@ -175,25 +175,25 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-20 md:mb-24"
+          className="mb-20 sm:mb-24 md:mb-28"
         >
-          <h3 className="text-xl sm:text-2xl font-display tracking-wider text-white uppercase text-center mb-8 md:mb-12">
+          <h3 className="text-xl sm:text-2xl font-display tracking-wider text-white uppercase text-center mb-10 sm:mb-12 md:mb-14">
             What Clients Say
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.author}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-5 sm:p-6 md:p-8"
+                className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-6 sm:p-7 md:p-8 lg:p-10"
               >
-                <p className="text-[#6b6b6b] leading-relaxed mb-4 sm:mb-6 italic text-sm sm:text-base">
+                <p className="text-[#6b6b6b] leading-relaxed mb-5 sm:mb-6 md:mb-8 italic text-sm sm:text-base">
                   "{testimonial.quote}"
                 </p>
-                <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex items-center gap-4 sm:gap-5">
                   <img
                     src={testimonial.image}
                     alt={testimonial.author}
@@ -215,7 +215,7 @@ const AboutSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h3 className="text-2xl font-display tracking-wider text-white uppercase text-center mb-12">
+          <h3 className="text-xl sm:text-2xl font-display tracking-wider text-white uppercase text-center mb-10 sm:mb-12 md:mb-14">
             Frequently Asked Questions
           </h3>
           

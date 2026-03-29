@@ -47,7 +47,7 @@ const WorkSection = () => {
     <section
       ref={sectionRef}
       id="work"
-      className="py-24 md:py-32 bg-[#0a0a0a]"
+      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header */}
@@ -55,22 +55,22 @@ const WorkSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-12 sm:mb-16 md:mb-20 text-center"
         >
           <span className="section-label">
             What I Do
           </span>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-4 text-white uppercase">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-3 sm:mt-4 text-white uppercase">
             Creative Services
           </h2>
-          <p className="mt-6 text-[#6b6b6b] max-w-2xl mx-auto text-base leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-[#6b6b6b] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed px-4 sm:px-0">
             I help brands and creators tell their stories through cinematic visuals.
             From concept to final delivery, every project receives the attention it deserves.
           </p>
         </motion.div>
 
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.a
               key={service.title}
@@ -99,17 +99,17 @@ const WorkSection = () => {
             </div>
 
             {/* Content */}
-            <div className="p-4 md:p-6">
+            <div className="p-5 sm:p-6 md:p-7">
               <span className="text-[10px] md:text-xs text-[#00e5c0] tracking-[0.2em] uppercase">{service.subtitle}</span>
-              <h3 className="text-xl md:text-2xl font-display tracking-wider text-white mt-1.5 md:mt-2 uppercase group-hover:text-[#00e5c0] transition-colors">
+              <h3 className="text-xl md:text-2xl font-display tracking-wider text-white mt-2 md:mt-2.5 uppercase group-hover:text-[#00e5c0] transition-colors">
                 {service.title}
               </h3>
-              <p className="mt-2 md:mt-3 text-xs md:text-sm text-[#6b6b6b] leading-relaxed line-clamp-2">
+              <p className="mt-2.5 md:mt-3 text-xs md:text-sm text-[#6b6b6b] leading-relaxed line-clamp-2">
                 {service.description}
               </p>
               
               {/* Arrow */}
-              <div className="mt-3 md:mt-4 flex items-center gap-2 text-[#6b6b6b] group-hover:text-white transition-colors">
+              <div className="mt-4 md:mt-5 flex items-center gap-2 text-[#6b6b6b] group-hover:text-white transition-colors">
                 <span className="text-[10px] md:text-xs tracking-widest uppercase">Explore</span>
                 <motion.svg 
                   className="w-3.5 h-3.5 md:w-4 md:h-4"
@@ -132,9 +132,9 @@ const WorkSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 md:mt-20 pt-10 md:pt-12 border-t border-[#1f1f1f]"
+          className="mt-16 sm:mt-20 md:mt-24 lg:mt-28 pt-10 sm:pt-12 md:pt-14 border-t border-[#1f1f1f]"
         >
-          <p className="text-center text-[10px] md:text-xs tracking-[0.2em] uppercase text-[#6b6b6b] mb-6 md:mb-8">
+          <p className="text-center text-[10px] md:text-xs tracking-[0.2em] uppercase text-[#6b6b6b] mb-8 md:mb-10">
             Trusted By Leading Brands
           </p>
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-16">

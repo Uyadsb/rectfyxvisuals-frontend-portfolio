@@ -81,7 +81,7 @@ const FilmSection = () => {
     <section
       ref={sectionRef}
       id="films"
-      className="py-24 md:py-32 bg-[#0a0a0a]"
+      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header with Stats */}
@@ -89,20 +89,20 @@ const FilmSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row md:justify-between md:items-end mb-8"
+          className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 md:mb-14"
         >
           <div>
-            <p className="section-label mb-2">Portfolio</p>
-            <h2 className="text-5xl md:text-7xl font-display tracking-wider text-white uppercase">
+            <p className="section-label mb-2 sm:mb-3">Portfolio</p>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display tracking-wider text-white uppercase">
               Film Work
             </h2>
-            <p className="mt-3 text-[#6b6b6b] max-w-lg text-base leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-[#6b6b6b] max-w-lg text-sm sm:text-base leading-relaxed">
               Every frame tells a story. Every cut builds emotion. Welcome to my visual narratives.
             </p>
           </div>
           
           {/* Stats */}
-          <div className="flex gap-12 pb-2 mt-6 md:mt-0">
+          <div className="flex gap-8 sm:gap-12 pb-2 mt-6 md:mt-0">
             <div>
               <div className="text-4xl md:text-5xl font-display text-white">50+</div>
               <div className="text-xs tracking-widest uppercase text-[#6b6b6b]">Projects</div>
@@ -119,9 +119,9 @@ const FilmSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8"
+          className="mb-10 sm:mb-12"
         >
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5 sm:gap-3">
             {filters.map((filter) => (
               <button
                 key={filter}
@@ -144,7 +144,7 @@ const FilmSection = () => {
           {filteredFilms.length > 0 && (
             <motion.div 
               layout
-              className="grid grid-cols-1 lg:grid-cols-12 gap-4"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6"
             >
               {/* Large featured card - spans 8 columns on lg */}
               {filteredFilms[0] && (
@@ -214,7 +214,7 @@ const FilmSection = () => {
               )}
 
               {/* Side cards - span 4 columns on lg, stacked */}
-              <div className="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-4">
+              <div className="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-5 sm:gap-6">
                 {filteredFilms.slice(1, 3).map((film) => (
                   <motion.div
                     key={film.id}
@@ -288,7 +288,7 @@ const FilmSection = () => {
           {filteredFilms.length > 3 && (
             <motion.div 
               layout
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-5 sm:mt-6"
             >
               {filteredFilms.slice(3).map((film) => (
                 <motion.div

@@ -15,45 +15,45 @@
   --font-body: 'Inter', sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  font-family: var(--font-body);
-  background-color: #0a0a0a;
-  color: var(--color-kolder-light);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    font-family: var(--font-body);
+    background-color: #0a0a0a;
+    color: var(--color-kolder-light);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-::selection {
-  background-color: var(--color-kolder-accent);
-  color: var(--color-kolder-black);
-}
+  ::selection {
+    background-color: var(--color-kolder-accent);
+    color: var(--color-kolder-black);
+  }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
 
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
-  border-radius: 3px;
-}
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 3px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-kolder-accent);
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-kolder-accent);
+  }
 }
 
 .font-display {
@@ -84,7 +84,19 @@ body {
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding: 0 3rem;
+  }
 }
 
 /* Film card with hover effects */
@@ -273,7 +285,19 @@ body {
 }
 
 .feature-card-content {
-  padding: 1.5rem;
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .feature-card-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-card-content {
+    padding: 2rem;
+  }
 }
 
 .accordion-item {

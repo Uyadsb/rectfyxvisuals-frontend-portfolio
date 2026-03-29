@@ -94,7 +94,7 @@ const PhotographySection = () => {
     <section
       ref={sectionRef}
       id="photos"
-      className="py-24 md:py-32 bg-[#0a0a0a]"
+      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a]"
     >
       <div className="section-container">
         {/* Section Header */}
@@ -102,17 +102,17 @@ const PhotographySection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-12"
+          className="mb-10 sm:mb-12 md:mb-14"
         >
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8">
             <div>
               <span className="section-label">
                 Gallery
               </span>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-4 text-white uppercase">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-3 sm:mt-4 text-white uppercase">
                 Photography
               </h2>
-              <p className="mt-4 text-[#6b6b6b] max-w-xl text-base leading-relaxed">
+              <p className="mt-4 sm:mt-5 text-[#6b6b6b] max-w-xl text-sm sm:text-base leading-relaxed">
                 Frozen fragments of time. Each photograph holds a universe of emotion within a single frame.
               </p>
             </div>
@@ -136,9 +136,9 @@ const PhotographySection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-10"
+          className="mb-10 sm:mb-12"
         >
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5 sm:gap-3">
             {filters.map((filter) => (
               <button
                 key={filter}
@@ -158,7 +158,7 @@ const PhotographySection = () => {
         {/* Masonry Grid */}
         <motion.div
           layout
-          className="columns-1 sm:columns-2 lg:columns-3 gap-3 md:gap-4"
+          className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-5 md:gap-6"
         >
         <AnimatePresence mode="popLayout">
           {filteredPhotos.map((photo, index) => (
@@ -169,7 +169,7 @@ const PhotographySection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4 }}
-              className="relative break-inside-avoid mb-3 md:mb-4 group overflow-hidden rounded-xl md:rounded-2xl cursor-pointer bg-[#111111]"
+              className="relative break-inside-avoid mb-4 sm:mb-5 md:mb-6 group overflow-hidden rounded-xl md:rounded-2xl cursor-pointer bg-[#111111]"
               onClick={() => openLightbox(photo, index)}
               data-cursor-view
             >

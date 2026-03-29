@@ -49,7 +49,7 @@ const ContactSection = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-24 md:py-32 bg-[#0a0a0a] relative overflow-visible"
+      className="py-20 sm:py-24 md:py-32 lg:py-40 bg-[#0a0a0a] relative overflow-visible"
     >
       <div className="section-container relative z-10">
         {/* Section Header */}
@@ -57,28 +57,28 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 md:mb-20"
         >
           <span className="section-label">
             Let's Connect
           </span>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-4 text-white uppercase">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display tracking-wider mt-3 sm:mt-4 text-white uppercase">
             Start a Project
           </h2>
-          <p className="mt-6 text-[#6b6b6b] max-w-xl mx-auto text-base leading-relaxed">
+          <p className="mt-5 sm:mt-6 text-[#6b6b6b] max-w-xl mx-auto text-sm sm:text-base leading-relaxed px-4 sm:px-0">
             Ready to bring your vision to life? Let's create something extraordinary together.
           </p>
         </motion.div>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 xl:gap-20">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-7 md:space-y-8">
               {/* Name */}
               <div>
                 <label className="text-[10px] sm:text-xs tracking-widest uppercase text-[#6b6b6b] block mb-2 sm:mb-3">
@@ -113,10 +113,10 @@ const ContactSection = () => {
 
               {/* Project Type */}
               <div>
-                <label className="text-[10px] sm:text-xs tracking-widest uppercase text-[#6b6b6b] block mb-2 sm:mb-3">
+                <label className="text-[10px] sm:text-xs tracking-widest uppercase text-[#6b6b6b] block mb-3 sm:mb-4">
                   Project Type
                 </label>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2.5 sm:gap-3">
                   {projectTypes.map((type) => (
                     <button
                       key={type}
@@ -205,10 +205,10 @@ const ContactSection = () => {
                 Let's discuss how we can bring your vision to life.
               </p>
 
-              <div className="space-y-3 sm:space-y-4">
+              <div className="space-y-4 sm:space-y-5">
                 <a
                   href="mailto:hello@koldercreative.com"
-                  className="flex items-center gap-3 sm:gap-4 text-[#6b6b6b] hover:text-white transition-colors group p-3 sm:p-4 bg-[#111111] rounded-xl border border-[#1f1f1f] hover:border-[#2a2a2a]"
+                  className="flex items-center gap-4 sm:gap-5 text-[#6b6b6b] hover:text-white transition-colors group p-4 sm:p-5 bg-[#111111] rounded-xl border border-[#1f1f1f] hover:border-[#2a2a2a]"
                 >
                   <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1f1f1f] flex items-center justify-center group-hover:bg-[#00e5c0] transition-colors flex-shrink-0">
                     <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:text-[#0a0a0a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -221,7 +221,7 @@ const ContactSection = () => {
                   </div>
                 </a>
 
-                <div className="flex items-center gap-3 sm:gap-4 text-[#6b6b6b] p-3 sm:p-4 bg-[#111111] rounded-xl border border-[#1f1f1f]">
+                <div className="flex items-center gap-4 sm:gap-5 text-[#6b6b6b] p-4 sm:p-5 bg-[#111111] rounded-xl border border-[#1f1f1f]">
                   <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1f1f1f] flex items-center justify-center flex-shrink-0">
                     <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -237,11 +237,11 @@ const ContactSection = () => {
             </div>
 
             {/* Social Links */}
-            <div className="mt-8 sm:mt-12">
-              <p className="text-[10px] sm:text-xs tracking-widest uppercase text-[#6b6b6b] mb-3 sm:mb-4">
+            <div className="mt-10 sm:mt-12 md:mt-14">
+              <p className="text-[10px] sm:text-xs tracking-widest uppercase text-[#6b6b6b] mb-4 sm:mb-5">
                 Follow Along
               </p>
-              <div className="flex gap-2 sm:gap-3">
+              <div className="flex gap-3 sm:gap-4">
                 {socialLinks.map((social) => (
                   <motion.a
                     key={social.name}
@@ -268,7 +268,7 @@ const ContactSection = () => {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 sm:mt-20 md:mt-24 pt-6 sm:pt-8 border-t border-[#1f1f1f] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#6b6b6b]"
+          className="mt-20 sm:mt-24 md:mt-28 pt-8 sm:pt-10 border-t border-[#1f1f1f] flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-xs sm:text-sm text-[#6b6b6b]"
         >
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#00e5c0] flex items-center justify-center">

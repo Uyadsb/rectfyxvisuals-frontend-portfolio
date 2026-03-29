@@ -36,7 +36,7 @@ function App() {
             <Navigation />
 
             {/* Main Content */}
-            <main className="relative pt-16">
+            <main className="relative pt-20 sm:pt-24">
               <HeroSection />
               <WorkSection />
               <FilmSection />
