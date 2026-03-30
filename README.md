@@ -60,11 +60,6 @@ npm run dev
 
 Visit `http://localhost:5173` to see the portfolio.
 
-### Build for Production
-
-```bash
-npm run build
-```
 
 ## 📁 Project Structure
 
@@ -110,4 +105,4 @@ Edit the theme variables in `src/index.css`:
 
 ---
 
-Inspired by [Kolder Creative](https://koldercreative.com)
+
